@@ -7,7 +7,7 @@
     <link rel ="stylesheet" href ="style.css">
 </head>
 <body>
-       <input type="text" class="grid-size" placeholder="enter grid size">
+       <input type="text" class="grid-size" placeholder="enter grid size(<=100)">
        <button>Reset</button>
     
     <div class ="container"></div>
@@ -28,9 +28,12 @@
         
         
         
-        if(newSize==''){
+        if(newSize=='' ){
     
         newSize =16;
+        }
+        if(newSize>100){
+            newSize=100
         }
 
     
