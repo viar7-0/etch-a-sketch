@@ -1,21 +1,23 @@
 
-div{
+
+body{
     display:flex;
     flex-wrap: wrap;
-    width:10px;
-    height:10px;
-    background-color: black;
+    flex-direction: column;
     gap:2px;
-
     
 }
 .container{
-    height:190px;
-    width: 190px;
+    display: flex;
+    flex-wrap: wrap;
+    height:1000px;
+    width: 1000px;
     border:2px solid black;
 }
-.item {
+.container div {
+    box-sizing: border-box;
     background-color: whitesmoke;
+    border: 2px solid black;
 }
 .is-hidden {
   display: none !important;

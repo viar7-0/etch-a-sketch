@@ -35,6 +35,8 @@
         if(newSize>100){
             newSize=100
         }
+        const containerSize= 1000;
+        const dSize =containerSize/newSize;
 
     
 
@@ -43,6 +45,8 @@
             const newDiv = document.createElement("div")
            //newDiv.textContent=i;
             newDiv.classList.add("item")
+            newDiv.style.width=`${dSize}px`
+            newDiv.style.height=`${dSize}px`
         
             container.appendChild(newDiv)
             newDiv.addEventListener("mouseenter",() =>{
