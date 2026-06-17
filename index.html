@@ -7,11 +7,14 @@
     <link rel ="stylesheet" href ="style.css">
 </head>
 <body>
-    <div class ="container">
-       
-    </div>
+       <input type="text" id="grid-size" placeholder="enter grid size">
+       <button>Reset</button>
+    
+    <div class ="container"></div>
+    
     <script>
         const container = document.querySelector(".container")
+     
         for(let i=0;i<256;i++){
             const newDiv = document.createElement("div")
            // newDiv.textContent=i;
@@ -19,11 +22,11 @@
         
             container.appendChild(newDiv)
             newDiv.addEventListener("mouseenter",() =>{
-                newDiv.style.background = "black"
+                newDiv.style.background = "linear-gradient(to bottom,#000000,#808080)"
             })
 
         }
-        console.log(item.innerHTML)
+        //console.log(item.innerHTML)
 
     </script>
 </body>
