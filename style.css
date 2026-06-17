@@ -17,3 +17,6 @@ div{
 .item {
     background-color: whitesmoke;
 }
+.is-hidden {
+  display: none !important;
+}

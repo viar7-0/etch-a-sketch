@@ -19,11 +19,13 @@
         let newSize =16;
      
         button.addEventListener("click",()=>{
+            container.classList.toggle('is-hidden')
+            container.replaceChildren()
 
                const inp = gridSize.value
             newSize=inp;
             console.log(inp)
-        })
+        
         
         
         if(newSize==''){
@@ -31,10 +33,12 @@
         newSize =16;
         }
 
+    
 
         for(let i=0;i<(newSize*newSize);i++){
+
             const newDiv = document.createElement("div")
-           // newDiv.textContent=i;
+           //newDiv.textContent=i;
             newDiv.classList.add("item")
         
             container.appendChild(newDiv)
@@ -43,6 +47,8 @@
             })
 
         }
+        container.classList.remove('is-hidden')
+     })
         //console.log(item.innerHTML)
 
     </script>
