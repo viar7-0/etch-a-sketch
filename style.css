@@ -5,6 +5,7 @@ body{
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(180, 218, 239);
     gap:10px;
     
 }
@@ -13,18 +14,23 @@ body{
     flex-wrap: wrap;
     height:1000px;
     width: 1000px;
+    background-color: whitesmoke;
     border:2px solid black;
 }
 .container div {
     box-sizing: border-box;
     background-color: whitesmoke;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 .is-hidden {
   display: none !important;
 }
+
 button{
 
     height: 25px;
     width: 50px;
+}
+h1 {
+    font-family: monospace,Arial,sans-serif;
 }

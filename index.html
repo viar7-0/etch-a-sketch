@@ -7,8 +7,11 @@
     <link rel ="stylesheet" href ="style.css">
 </head>
 <body>
+    <h1> Etch-A-Sketch</h1>
+
        <input type="text" class="grid-size" placeholder="enter grid size(<=100)">
-       <button>Reset</button>
+       <button>Set</button>
+      
     
     <div class ="container"></div>
     
@@ -37,6 +40,13 @@
         }
         const containerSize= 1000;
         const dSize =containerSize/newSize;
+        const RandomRGB = () => {
+            const r = Math.floor(Math.random()*256)
+            const g = Math.floor(Math.random()*256)
+            const b =Math.floor(Math.random()*256)
+            return `rgb(${r},${g},${b})`
+
+        }
 
     
 
@@ -44,13 +54,14 @@
 
             const newDiv = document.createElement("div")
            //newDiv.textContent=i;
-            newDiv.classList.add("item")
+          //  newDiv.classList.add("item")
             newDiv.style.width=`${dSize}px`
             newDiv.style.height=`${dSize}px`
         
             container.appendChild(newDiv)
+           // console.log(RandomRGB())
             newDiv.addEventListener("mouseenter",() =>{
-                newDiv.style.background = "linear-gradient(to bottom,#000000,#808080)"
+                newDiv.style.background = RandomRGB()
             })
 
         }
@@ -59,5 +70,7 @@
         //console.log(item.innerHTML)
 
     </script>
+     <p>Press set again to clear the grid</p>
+    
 </body>
 </html>
