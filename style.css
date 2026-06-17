@@ -4,11 +4,7 @@ div{
     flex-wrap: wrap;
     width:10px;
     height:10px;
-    
-
     background-color: black;
-
-
     gap:2px;
 
     
@@ -20,5 +16,4 @@ div{
 }
 .item {
     background-color: whitesmoke;
-
 }
