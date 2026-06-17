@@ -7,15 +7,32 @@
     <link rel ="stylesheet" href ="style.css">
 </head>
 <body>
-       <input type="text" id="grid-size" placeholder="enter grid size">
+       <input type="text" class="grid-size" placeholder="enter grid size">
        <button>Reset</button>
     
     <div class ="container"></div>
     
     <script>
         const container = document.querySelector(".container")
+        const gridSize = document.querySelector(".grid-size")
+        const button = document.querySelector("button")
+        let newSize =16;
      
-        for(let i=0;i<256;i++){
+        button.addEventListener("click",()=>{
+
+               const inp = gridSize.value
+            newSize=inp;
+            console.log(inp)
+        })
+        
+        
+        if(newSize==''){
+    
+        newSize =16;
+        }
+
+
+        for(let i=0;i<(newSize*newSize);i++){
             const newDiv = document.createElement("div")
            // newDiv.textContent=i;
             newDiv.classList.add("item")
